@@ -20,4 +20,16 @@ class CalcularTest extends TestCase
         $response2 = $this->get('/');
         $response2->assertSee('El area del círculo de radio 4 m es: 50.265482457437 m^2.');
     }
+
+    
+
+
+
+    public function testcomprobarPerimetro()
+    {
+        $response = $this->post('/perimetro',['radio2'=>5]);
+
+        $response2 = $this->get('/');
+        $response2->assertSee('El perimetro del círculo de radio 5 m es: 47.123889803847 m.');
+    }
 }
