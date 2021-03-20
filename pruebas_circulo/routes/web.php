@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', 'CalculoController');
+
+Route::post('/area', 'CalculoController@calcularArea')->name('area');
+
+Route::post('/perimetro', 'CalculoController@calcularPerimetro')->name('perimetro');
