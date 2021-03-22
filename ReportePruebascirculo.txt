@@ -26,5 +26,32 @@ REPORTE DE PRUEBAS
         el valor 4 o 5, press - que presiona el boton de nombre Area ó Perimetro, 
         assertSee - que verifica que se muestre en el cuerpo de la pagina raiz el 
         mensaje correspondiente al valor que se digito en el input.
+        
+        Nota: Para correr este Test, es necesario tener dusk instalado, de no tenerlo
+          instalarlo con los siguientes comandos:
+          composer require --dev laravel/dusk
+          php artisan dusk:install
+            Este ultimo comando trae o descarga por default el driver de la version
+            89 de google Chrome en caso de tener otra version de chrome tambien
+            ejecutar este otro comando sustituyendo el 88 con su numero de version:
+          php artisan dusk:chrome-driver 88
+            Una vez hecho dentro del repositorio el archivo .env no esta, dado que
+            git lo ignora, debe crear el archivo .env justo donde se encuentra el
+            archivo .env.example; y copiar todo lo que hay en este ultimo en el 
+            archivo creado .env, una vez hecho recuerde ejecutar el proyecto
+            para ello puede utilizar el comando:
+          php artisan serve
+            una vez ejecutado debe abrir el archivo .env y en la variable 
+            APP_URL= , en ella debe colocar la url de su servidor local donde se 
+            ejecuta su proyecto, y mientras su proyecto este corriendo puede
+            ejecutar por fin el test de dusk con el siguiente comando:
+          php artisan dusk
+
+
+- Pruebas de cobertura.
+    Dentro de la carpeta del Proyecto llamada pruebas_circulo busque la carpeta
+    PruebasCobertura/ ahi busque y abra el archivo index.html en este se mostrara 
+    el reporte de todo el proyecto, pero lo que nosotros verificamos es el 
+    archivo CalculoController.php que se encuentran en la carpeta Http/Controllers/
     
        
