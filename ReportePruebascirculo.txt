@@ -1,0 +1,30 @@
+REPORTE DE PRUEBAS
+
+- Pruebas Feature
+    En la clase CalcularTest
+        Los metodos testcomprobarArea y testcomprobarPerimetro
+        se verifica que al hacer post este return en la pagina raiz y se muestre
+        un mensaje de respuesta. Esto se hace designando a una variable $response
+        que haga post hacia la ruta especificada para cada metodo sea "/area" o
+        "/perimetro" y se le mandan parametros dentro de los componentes inputs que
+        les corresponden, luego se le asigna a otra variable $response2  que haga
+        obtenga o haga get en la raiz "/" para luego que a traves de assertSee 
+        compruebe que realmente en la raiz se muestre el mensaje de respuesta 
+        correspondiente a los datos introducidos.
+    Nota: Este test corre con el siguiente comando:
+          php artisan test
+
+
+
+- Pruebas Dusk
+    En la clase CalcularBTest
+        Los metodos tesExample, testExample2 realizan la funcion de verificar que
+        al teclear un valor input y presionar el boton correspondiente este muestre
+        el mensaje con la respuesta. Esto se logra a traves de dusk que utiliza un
+        navegador para que simule ser un cliente, este a traves de los pasos visit
+        -que visita la pagina raiz "/", type - que digita en el input de nombre "x"
+        el valor 4 o 5, press - que presiona el boton de nombre Area ó Perimetro, 
+        assertSee - que verifica que se muestre en el cuerpo de la pagina raiz el 
+        mensaje correspondiente al valor que se digito en el input.
+    
+       
